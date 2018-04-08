@@ -10,5 +10,7 @@
     <color name="white1">#FFFFFF</color>
     <color name="white2">#DDDDDD</color>
     <color name="white3">#CCCCCC</color>
-    <color name="black2">#222222</color>
+    <color name="red1">#a31111</color>
+    <color name="blue1">#1147a3</color>
+    <color name="green1">#0b720b</color>
 </resources>

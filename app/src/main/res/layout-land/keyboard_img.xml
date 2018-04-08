@@ -7,54 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
-    <android.support.percent.PercentRelativeLayout
-        app:layout_widthPercent="20%"
-        app:layout_heightPercent="100%"
-        android:id="@+id/C1"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:text="undo" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
-            android:id="@+id/undo"
-            android:onClick="undo"
-            android:layout_width="match_parent"
-            app:layout_heightPercent="20%"
-            />
-        <TextView
-            android:text="swap" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
-            android:id="@+id/swap"
-            android:onClick="swap"
-            android:layout_width="match_parent"
-            app:layout_heightPercent="20%"
-            android:layout_below="@id/undo"
-        />
-        <TextView
-            android:text="drop" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
-            android:id="@+id/drop"
-            android:onClick="drop"
-            android:layout_width="match_parent"
-            app:layout_heightPercent="20%"
-            android:layout_below="@id/swap"
-        />
-        <TextView
-            android:text="" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
-            android:id="@+id/enter"
-            android:onClick="enter"
-            android:layout_width="match_parent"
-            app:layout_heightPercent="20%"
-            android:layout_below="@id/drop"
-            android:background="@color/orange5"
-        />
-        <TextView
-            android:text="" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
-            android:id="@+id/enter2"
-            android:onClick="enter"
-            android:layout_width="match_parent"
-            app:layout_heightPercent="20%"
-            android:layout_below="@id/enter"
-            android:background="@color/orange5"
-        />
-    </android.support.percent.PercentRelativeLayout>
+
 
     <android.support.percent.PercentRelativeLayout
         app:layout_widthPercent="20%"
@@ -98,7 +51,7 @@
             android:layout_below="@id/k4"
         />
         <TextView
-            android:text="del" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+            android:text="A/C" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/delete"
             android:onClick="delete"
             android:layout_width="match_parent"
@@ -256,6 +209,76 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/subtract"
         />
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/C1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        app:layout_heightPercent="100%"
+        app:layout_widthPercent="20%">
+
+        <TextView
+            android:id="@+id/undo"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:onClick="undo"
+            android:text="UNDO"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_heightPercent="20%" />
+
+        <TextView
+            android:id="@+id/swap"
+            android:layout_width="match_parent"
+            android:layout_below="@id/undo"
+            android:gravity="center"
+            android:onClick="swap"
+            android:text="SWAP"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_heightPercent="20%" />
+
+        <TextView
+            android:id="@+id/drop"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:onClick="drop"
+            android:text="DROP"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_heightPercent="20%" />
+
+        <TextView
+            android:id="@+id/launchSettings"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/drop"
+            android:gravity="center"
+            android:onClick="launchSettings"
+            android:text="SET"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_heightPercent="20%" />
+
+        <TextView
+            android:id="@+id/enter2"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/orange5"
+            android:gravity="center"
+            android:onClick="enter"
+            android:text=""
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_heightPercent="20%" />
     </android.support.percent.PercentRelativeLayout>
 
 </android.support.percent.PercentRelativeLayout>

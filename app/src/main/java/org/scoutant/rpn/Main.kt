@@ -1,6 +1,7 @@
 package org.scoutant.rpn
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -23,8 +24,12 @@ class Main : Activity(), Update {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
         bv = findViewById<TextView> (R.id.buffer) // buffer view
-//        for (i in  0..ids.size-1) svs[i] = this.findViewById( ids[i]) as TextView?
         for (i in  0..ids.size-1) svs[i] = findViewById<TextView>( ids[i])
+    }
+
+    fun launchSettings(v: View){
+        val intent = Intent(this, SettingsActivity::class.java).apply {}
+        startActivityForResult(intent, 1)
     }
 
     override fun onResume() {
@@ -37,8 +42,6 @@ class Main : Activity(), Update {
 
     /** updates the display */
     override fun update() {
-//        Log.d("calculator", "calculator stack size :" + calculator.size())
-//        Log.d("buffer", "buffer is : " + buffer)
         if (buffer.isEmpty()) bv!!.visibility = View.GONE
         else {
             bv!!.visibility = View.VISIBLE
