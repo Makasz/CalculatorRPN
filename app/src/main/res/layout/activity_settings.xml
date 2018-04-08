@@ -18,6 +18,7 @@
         tools:textSize="30sp" />
 
     <RadioGroup
+        android:id="@+id/radio"
         android:layout_width="345dp"
         android:layout_height="267dp"
         android:layout_marginStart="8dp"
@@ -29,6 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:checked="false"
             android:onClick="redButton"
             android:text="Red"
             android:textColor="@color/red1"

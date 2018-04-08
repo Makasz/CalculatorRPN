@@ -4,6 +4,9 @@ import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import android.content.Intent
+import android.widget.RadioButton
+import android.widget.Button
+import android.widget.RadioGroup
 
 
 class SettingsActivity : Activity() {
@@ -14,6 +17,22 @@ class SettingsActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 //        val blue = findViewById<View>(R.id.)
+        val red = findViewById<View>(R.id.redButton).id
+        val blue = findViewById<View>(R.id.blueButton).id
+        val green = findViewById<View>(R.id.greenButton).id
+        val radioGroup : RadioGroup = findViewById(R.id.radio)
+        val button : Button = findViewById(R.id.applyButton)
+        button.setOnClickListener{
+            val selectedId = radioGroup.checkedRadioButtonId
+            if (selectedId == red) {
+                button.text = "Red"
+                val intent = Intent()
+                intent.putExtra("Color", "value_here")
+                setResult(RESULT_OK, intent)
+                finish()
+            }
+
+        }
     }
 
     fun goToMenu(v: View){

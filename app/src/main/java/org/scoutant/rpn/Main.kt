@@ -2,6 +2,7 @@ package org.scoutant.rpn
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -30,6 +31,17 @@ class Main : Activity(), Update {
     fun launchSettings(v: View){
         val intent = Intent(this, SettingsActivity::class.java).apply {}
         startActivityForResult(intent, 1)
+    }
+
+    public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 1) {
+            if (resultCode == Activity.RESULT_OK) {
+                val strEditText = data.getStringExtra("Color")
+                val layoutMain =findViewById<View>(R.id.MainLayout)
+                layoutMain.setBackgroundColor(Color.parseColor("#a31111"))
+            }
+        }
     }
 
     override fun onResume() {
