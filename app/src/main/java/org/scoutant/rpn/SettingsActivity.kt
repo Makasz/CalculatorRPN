@@ -25,9 +25,20 @@ class SettingsActivity : Activity() {
         button.setOnClickListener{
             val selectedId = radioGroup.checkedRadioButtonId
             if (selectedId == red) {
-                button.text = "Red"
                 val intent = Intent()
-                intent.putExtra("Color", "value_here")
+                intent.putExtra("Color", "#a31111")
+                setResult(RESULT_OK, intent)
+                finish()
+            }
+            if (selectedId == blue) {
+                val intent = Intent()
+                intent.putExtra("Color", "#1147a3")
+                setResult(RESULT_OK, intent)
+                finish()
+            }
+            if (selectedId == green) {
+                val intent = Intent()
+                intent.putExtra("Color", "#0b720b")
                 setResult(RESULT_OK, intent)
                 finish()
             }

@@ -14,14 +14,14 @@
         android:orientation="vertical"
         >
         <TextView
-            android:text="undo" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+            android:text="UNDO" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/undo"
             android:onClick="undo"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
             />
         <TextView
-            android:text="swap" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+            android:text="SWAP" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/swap"
             android:onClick="swap"
             android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:layout_below="@id/undo"
         />
         <TextView
-            android:text="drop" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+            android:text="DROP" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/drop"
             android:onClick="drop"
             android:layout_width="match_parent"
@@ -38,25 +38,24 @@
         />
 
         <TextView
-            android:id="@+id/enter"
+            android:id="@+id/launchSettings"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:layout_below="@id/drop"
-            android:background="@color/orange5"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/drop"
             android:gravity="center"
-            android:onClick="enter"
-            android:text=""
+            android:onClick="launchSettings"
+            android:text="SET"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_heightPercent="20%" />
         <TextView
-            android:text="" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
-            android:id="@+id/enter2"
+            android:text="ENTER" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+            android:id="@+id/enter"
             android:onClick="enter"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
-            android:layout_below="@id/enter"
-            android:background="@color/orange5"
+            android:layout_below="@id/launchSettings"
         />
     </android.support.percent.PercentRelativeLayout>
 
@@ -65,8 +64,16 @@
         app:layout_heightPercent="100%"
         android:id="@+id/C2"
         android:orientation="vertical"
-        android:layout_toRightOf="@id/C1"
+        android:layout_toRightOf="@id/C5"
         >
+        <TextView
+            android:text="+" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+            android:id="@+id/add"
+            android:onClick="add"
+            android:layout_width="match_parent"
+            app:layout_heightPercent="20%"
+            android:layout_below="@id/k7"
+            />
         <TextView
             android:text="+/-" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/negate"
@@ -81,17 +88,8 @@
             android:onClick="digit"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
-            android:layout_below="@id/negate"
-        />
-        <TextView
-            android:text="4" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
-            android:id="@+id/k4"
-            android:tag="4"
-            android:onClick="digit"
-            android:layout_width="match_parent"
-            app:layout_heightPercent="20%"
-            android:layout_below="@id/k7"
-        />
+            android:layout_below="@id/k4"
+            />
         <TextView
             android:text="1" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/k1"
@@ -99,16 +97,20 @@
             android:onClick="digit"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
-            android:layout_below="@id/k4"
-        />
+            android:layout_below="@id/negate"
+            />
+
         <TextView
-            android:text="del" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
-            android:id="@+id/delete"
-            android:onClick="delete"
+            android:text="4" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+            android:id="@+id/k4"
+            android:tag="4"
+            android:onClick="digit"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
             android:layout_below="@id/k1"
         />
+
+
     </android.support.percent.PercentRelativeLayout>
 
     <android.support.percent.PercentRelativeLayout
@@ -132,7 +134,7 @@
             android:onClick="digit"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
-            android:layout_below="@id/reciprocal"
+            android:layout_below="@id/k5"
         />
         <TextView
             android:text="5" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
@@ -141,7 +143,7 @@
             android:onClick="digit"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
-            android:layout_below="@id/k8"
+            android:layout_below="@id/k2"
         />
         <TextView
             android:text="2" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
@@ -150,7 +152,7 @@
             android:onClick="digit"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
-            android:layout_below="@id/k5"
+            android:layout_below="@id/reciprocal"
         />
         <TextView
             android:text="0" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
@@ -159,7 +161,7 @@
             android:onClick="digit"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
-            android:layout_below="@id/k2"
+            android:layout_below="@id/k8"
         />
     </android.support.percent.PercentRelativeLayout>
 
@@ -184,7 +186,7 @@
             android:onClick="digit"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
-            android:layout_below="@id/sqrt"
+            android:layout_below="@id/k6"
         />
         <TextView
             android:text="6" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
@@ -193,7 +195,7 @@
             android:onClick="digit"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
-            android:layout_below="@id/k9"
+            android:layout_below="@id/k3"
         />
         <TextView
             android:text="3" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
@@ -202,7 +204,7 @@
             android:onClick="digit"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
-            android:layout_below="@id/k6"
+            android:layout_below="@id/sqrt"
         />
         <TextView
             android:text="." android:gravity="center" android:textSize="20sp" android:textStyle="bold"
@@ -210,7 +212,7 @@
             android:onClick="dot"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
-            android:layout_below="@id/k3"
+            android:layout_below="@id/k9"
         />
     </android.support.percent.PercentRelativeLayout>
 
@@ -219,7 +221,7 @@
         app:layout_heightPercent="100%"
         android:id="@+id/C5"
         android:orientation="vertical"
-        android:layout_toRightOf="@id/C4"
+        android:layout_toRightOf="@id/C1"
     >
         <TextView
             android:text="xn" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
@@ -252,14 +254,15 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/multiply"
         />
+
         <TextView
-            android:text="+" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
-            android:id="@+id/add"
-            android:onClick="add"
+            android:text="A/C" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+            android:id="@+id/delete"
+            android:onClick="delete"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
             android:layout_below="@id/subtract"
-        />
+            />
     </android.support.percent.PercentRelativeLayout>
 
 </android.support.percent.PercentRelativeLayout>

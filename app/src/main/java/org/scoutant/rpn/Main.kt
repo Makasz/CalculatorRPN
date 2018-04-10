@@ -39,7 +39,7 @@ class Main : Activity(), Update {
             if (resultCode == Activity.RESULT_OK) {
                 val strEditText = data.getStringExtra("Color")
                 val layoutMain =findViewById<View>(R.id.MainLayout)
-                layoutMain.setBackgroundColor(Color.parseColor("#a31111"))
+                layoutMain.setBackgroundColor(Color.parseColor(strEditText))
             }
         }
     }
