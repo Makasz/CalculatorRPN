@@ -20,7 +20,7 @@ class Main : Activity(), Update {
     private var cells_list: Array<TextView?> = arrayOfNulls(id_list.size)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        state.color("#1147a3")
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
         buffer_view = findViewById(R.id.buffer)
@@ -50,7 +50,12 @@ class Main : Activity(), Update {
         super.onResume()
         calculator = Calculator(state.cache())
         val layoutMain = findViewById<View>(R.id.MainLayout)
-        layoutMain.setBackgroundColor(Color.parseColor(state.color()))
+        Log.i("color_code", state.color())
+        try {
+            layoutMain.setBackgroundColor(Color.parseColor(state.color()))
+        } catch (e: Error) {
+            state.color("#1147a3")
+        }
         update()
     }
 

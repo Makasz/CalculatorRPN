@@ -7,15 +7,13 @@ class State ( context: Context){
     private val prefs = PreferenceManager.getDefaultSharedPreferences(context)
     private val editor = prefs.edit()
     private val CACHE = "stack-cache"
-    private var color = prefs.edit()
 
     fun color( col: String) : State {
-//        color.putString("Color", col).apply()
-        return save("Color", col)
+        return save("color-cache", col)
     }
 
     fun color() : String {
-        return prefs.getString("Color", "")
+        return prefs.getString("color-cache", "")
     }
 
     fun cache (list: String) : State {
