@@ -1,4 +1,4 @@
-package orange.com.mykotlin
+package org.mlesny.rpn
 
 class Buffer {
     private var buffer = StringBuilder( 32)
@@ -16,7 +16,6 @@ class Buffer {
     fun get() : String = buffer.toString()
     override fun toString(): String = get()
 
-    /** Deletes the rightmost character */
     fun delete() {
         if (isEmpty()) return
         buffer.setLength( length()-1)

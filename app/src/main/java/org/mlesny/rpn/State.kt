@@ -1,4 +1,4 @@
-package org.scoutant.rpn
+package org.mlesny.rpn
 
 import android.content.Context
 import android.preference.PreferenceManager
@@ -7,9 +7,18 @@ class State ( context: Context){
     private val prefs = PreferenceManager.getDefaultSharedPreferences(context)
     private val editor = prefs.edit()
     private val CACHE = "stack-cache"
+    private var color = prefs.edit()
+
+    fun color( col: String) : State {
+//        color.putString("Color", col).apply()
+        return save("Color", col)
+    }
+
+    fun color() : String {
+        return prefs.getString("Color", "")
+    }
 
     fun cache (list: String) : State {
-        // save only if different so as to preserve true previous state for Undo feature
         if (cache().equals(list)) return this
         return save( CACHE, list)
     }

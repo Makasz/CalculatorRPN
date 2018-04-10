@@ -1,22 +1,17 @@
-package org.scoutant.rpn
+package org.mlesny.rpn
 
 import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import android.content.Intent
-import android.widget.RadioButton
 import android.widget.Button
 import android.widget.RadioGroup
 
 
 class SettingsActivity : Activity() {
-
-    val color = "#0b720b"
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
-//        val blue = findViewById<View>(R.id.)
         val red = findViewById<View>(R.id.redButton).id
         val blue = findViewById<View>(R.id.blueButton).id
         val green = findViewById<View>(R.id.greenButton).id

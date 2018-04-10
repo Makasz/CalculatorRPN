@@ -1,4 +1,4 @@
-package org.scoutant.rpn
+package org.mlesny.rpn
 
 interface Update {
     fun update()
